@@ -1,3 +1,4 @@
 #
 # system.prop for c67ml
 #
+persist.sys.usb.config=mtp,adb
