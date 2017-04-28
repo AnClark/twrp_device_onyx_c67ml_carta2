@@ -1,2 +1,2 @@
 # ON HEAD
-import init.bootmode.${ro.bootmode}.rc
+import init.bootmode.unknown.rc
