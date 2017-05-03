@@ -40,9 +40,13 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := c67ml
 
-BOARD_KERNEL_CMDLINE := 
+# Kernel / bootimg configurations
+# NOTICE: Rockchip's bootimg has its own format, so we must use proprietary tools to build it.
+BOARD_CUSTOM_MKBOOTIMG := device/onyx/c67ml/toolchain/mkbootimg-rk
+BOARD_KERNEL_CMDLINE := --ramdisk_offset 0x62000000 --second_offset 0x60f00000 --tags_offset 0x60088000
 BOARD_KERNEL_BASE := 0x60400000
 BOARD_KERNEL_PAGESIZE := 16384
+BOARD_CUSTOM_BOOTIMG_MK := device/onyx/c67ml/mkbootimg_rk.mk
 
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
@@ -67,4 +71,7 @@ TW_HAS_DOWNLOAD_MODE := true
 # Enable logcat support! Yahoo!
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# Recovery configurations
+TARGET_RECOVERY_INITRC := device/onyx/c67ml/recovery/root/init.rk30board.rc
 

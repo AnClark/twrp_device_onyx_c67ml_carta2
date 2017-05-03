@@ -1,2 +1,2 @@
-# ON HEAD
+# Load NAND MTD driver
 import init.bootmode.unknown.rc
