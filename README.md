@@ -5,7 +5,7 @@ TWRP device tree for ONYX Boox C67ML carta2 e-ink reader
 - Compilation succeed, but it cannot be booted properly --- **KERNEL PANICKED!**
 
 ### Kernel log
-`
+---
 <0>[    6.866080] Kernel panic - not syncing: Attempted to kill init!
 <4>[    7.269506] [<c0440ac4>] (unwind_backtrace+0x0/0xe0) from [<c08a9558>] (panic+0x68/0x190)
 <4>[    7.277718] [<c08a9558>] (panic+0x68/0x190) from [<c046e804>] (do_exit+0xb0/0x6e0)
@@ -47,4 +47,4 @@ TWRP device tree for ONYX Boox C67ML carta2 e-ink reader
 <4>[    7.513404] fed00130: 00000000 00000000 00000000 00000000
 <4>[    7.518809] fed00140: 3a980064 00000000 00000000 00000000
 <0>[    7.524222] Rebooting in 1 seconds..
-`
+---
